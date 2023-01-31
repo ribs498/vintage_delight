@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "vintagedelight:block/hop_sapling"
+    }
+  },
+  "render_type": "cutout"
+}

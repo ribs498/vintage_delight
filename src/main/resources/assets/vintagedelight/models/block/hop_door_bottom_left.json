@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "textures": {
+    "bottom": "vintagedelight:block/hop_door_bottom",
+    "top": "vintagedelight:block/hop_door_top"
+  }
+}

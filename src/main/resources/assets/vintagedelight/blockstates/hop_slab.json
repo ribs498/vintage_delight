@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "vintagedelight:block/hop_slab"
+    },
+    "type=double": {
+      "model": "vintagedelight:block/hop_planks"
+    },
+    "type=top": {
+      "model": "vintagedelight:block/hop_slab_top"
+    }
+  }
+}

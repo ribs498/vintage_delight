@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "vintagedelight:block/stripped_hop_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "vintagedelight:block/stripped_hop_wood"
+    },
+    "axis=z": {
+      "model": "vintagedelight:block/stripped_hop_wood",
+      "x": 90
+    }
+  }
+}

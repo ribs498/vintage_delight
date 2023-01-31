@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "vintagedelight:hop_log",
+    "vintagedelight:hop_wood",
+    "vintagedelight:stripped_hop_log",
+    "vintagedelight:stripped_hop_wood"
+  ]
+}

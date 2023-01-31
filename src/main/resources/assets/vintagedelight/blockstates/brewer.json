@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "vintagedelight:block/brewer"
+    },
+    "facing=south": {
+      "model": "vintagedelight:block/brewer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "vintagedelight:block/brewer",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "vintagedelight:block/brewer",
+      "y": 90
+    }
+  }
+}

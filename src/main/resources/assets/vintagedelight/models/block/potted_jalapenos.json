@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "textures": {
+    "plant": "vintagedelight:block/jalapeno_stage_6"
+  },
+  "render_type": "cutout"
+}

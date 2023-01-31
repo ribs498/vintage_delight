@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "vintagedelight:block/hop_pressure_plate"
+    },
+    "powered=true": {
+      "model": "vintagedelight:block/hop_pressure_plate_down"
+    }
+  }
+}

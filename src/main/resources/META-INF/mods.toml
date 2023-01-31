@@ -1,0 +1,32 @@
+modLoader="javafml"
+loaderVersion="[41,)"
+license="GNU General Public License v3.0"
+
+[[mods]]
+modId="vintagedelight"
+version="0.7.2"
+displayName="Vintage Delight"
+authors="Ribs"
+credits="Ribs"
+description="A Vintage Farmers Delight Add-on :)"
+
+[[dependencies.vintagedelight]]
+modId="forge"
+mandatory=true
+versionRange="[41.0.94,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.vintagedelight]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.19,1.20)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.vintagedelight]]
+modId="farmersdelight"
+mandatory=true
+versionRange="[1.19-1.2,)"
+ordering="AFTER"
+side="BOTH"
+
+

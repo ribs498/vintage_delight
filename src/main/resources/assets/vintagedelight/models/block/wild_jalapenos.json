@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "vintagedelight:block/wild_jalapenos"
+  },
+  "render_type": "cutout"
+}

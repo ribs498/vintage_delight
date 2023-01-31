@@ -1,0 +1,6 @@
+{
+  "parent": "vintagedelight:item/generated",
+  "textures": {
+    "layer0": "vintagedelight:item/hop_sign"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "textures": {
+    "plant": "vintagedelight:block/wild_soybeans"
+  },
+  "render_type": "cutout"
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "vintagedelight:block/hop_leaves"
+    }
+  },
+  "render_type": "cutout"
+}

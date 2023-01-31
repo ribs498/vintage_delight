@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "vintagedelight:block/magic_bean"
+    }
+  },
+  "render_type": "cutout"
+}

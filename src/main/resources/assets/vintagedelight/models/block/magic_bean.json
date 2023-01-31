@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "vintagedelight:block/magic_bean"
+  },
+  "render_type": "cutout"
+}

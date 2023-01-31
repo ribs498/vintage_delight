@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "vintagedelight:block/hop_leaves"
+  },
+  "render_type": "cutout"
+}
