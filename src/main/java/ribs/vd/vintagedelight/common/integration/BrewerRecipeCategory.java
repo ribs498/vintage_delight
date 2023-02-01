@@ -56,13 +56,14 @@ public class BrewerRecipeCategory implements IRecipeCategory<BrewerRecipe> {
         builder.addSlot(RecipeIngredientRole.INPUT, 62, 22).addIngredients(recipe.getIngredients().get(0));
         builder.addSlot(RecipeIngredientRole.INPUT, 62, 41).addIngredients(recipe.getIngredients().get(1));
         builder.addSlot(RecipeIngredientRole.INPUT, 62, 60).addIngredients(recipe.getIngredients().get(2));
+        builder.addSlot(RecipeIngredientRole.INPUT, 81, 22).addIngredients(recipe.getIngredients().get(3));
         builder.addSlot(RecipeIngredientRole.INPUT, 31, 15)
 
                 .addIngredients(ForgeTypes.FLUID_STACK, List.of(recipe.getFluid()))
                 .setFluidRenderer(1000, true, 16, 61);
 
 
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 134, 41).addItemStack(recipe.getResultItem());
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 100, 60).addItemStack(recipe.getResultItem());
     }
 
 }

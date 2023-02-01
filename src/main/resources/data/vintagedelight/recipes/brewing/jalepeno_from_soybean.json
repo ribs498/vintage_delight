@@ -1,0 +1,21 @@
+{
+  "type": "vintagedelight:brewing",
+  "ingredients": [
+    {
+      "item": "vintagedelight:soybean_seeds"
+    },
+    {
+      "item": "vintagedelight:soybean"
+    },
+    {
+      "item": "vintagedelight:peanut"
+    }
+  ],
+  "fluid": {
+    "FluidName": "minecraft:water",
+    "Amount": 50
+  },
+  "output": {
+    "item": "vintagedelight:jalapeno"
+  }
+}

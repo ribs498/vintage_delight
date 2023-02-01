@@ -41,7 +41,7 @@ public class BrewerScreen extends AbstractContainerScreen<BrewerMenu> {
     }
 
     private void renderFluidAreaTooltips(PoseStack pPoseStack, int pMouseX, int pMouseY, int x, int y) {
-        if(isMouseAboveArea(pMouseX, pMouseY, x, y, 55, 15)) {
+        if(isMouseAboveArea(pMouseX, pMouseY, x, y, 31, 15)) {
             renderTooltip(pPoseStack, renderer.getTooltip(menu.getFluidStack(), TooltipFlag.Default.NORMAL),
                     Optional.empty(), pMouseX - x, pMouseY - y);
         }
@@ -61,7 +61,7 @@ public class BrewerScreen extends AbstractContainerScreen<BrewerMenu> {
 
     private void renderProgressArrow(PoseStack pPoseStack, int x, int y) {
         if(menu.isCrafting()) {
-            blit(pPoseStack, x + 100,  90, 176, 4, 10, menu.getScaledProgress());
+            blit(pPoseStack, x + 104, y + 28, 176, 2, 8, menu.getScaledProgress());
         }
     }
 

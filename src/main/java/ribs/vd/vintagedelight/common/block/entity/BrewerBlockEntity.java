@@ -40,7 +40,7 @@ import java.util.Map;
 import java.util.Optional;
 
 public class BrewerBlockEntity extends BlockEntity implements MenuProvider {
-    private final ItemStackHandler itemHandler = new ItemStackHandler(5) {
+    private final ItemStackHandler itemHandler = new ItemStackHandler(6) {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
@@ -50,8 +50,8 @@ public class BrewerBlockEntity extends BlockEntity implements MenuProvider {
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
                 case 0 -> stack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).isPresent();
-                case 1, 2, 3 -> true;
-                case 4 -> false;
+                case 1, 2, 3 , 4-> true;
+                case 5 -> false;
                 default -> super.isItemValid(slot, stack);
             };
         }
@@ -82,10 +82,10 @@ public class BrewerBlockEntity extends BlockEntity implements MenuProvider {
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
     private final Map<Direction, LazyOptional<WrappedHandler>> directionWrappedHandlerMap =
-            Map.of(Direction.DOWN, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 3, (i, s) -> false)),
+            Map.of(Direction.DOWN, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 5, (i, s) -> false)),
                     Direction.NORTH, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 1,
                             (index, stack) -> itemHandler.isItemValid(1, stack))),
-                    Direction.SOUTH, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 3, (i, s) -> false)),
+                    Direction.SOUTH, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 5, (i, s) -> false)),
                     Direction.EAST, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 1,
                             (index, stack) -> itemHandler.isItemValid(1, stack))),
                     Direction.WEST, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 0 || index == 1,
@@ -121,7 +121,7 @@ public class BrewerBlockEntity extends BlockEntity implements MenuProvider {
 
             @Override
             public int getCount() {
-                return 4;
+                return 5;
             }
         };
     }
@@ -274,8 +274,9 @@ public class BrewerBlockEntity extends BlockEntity implements MenuProvider {
             pEntity.itemHandler.extractItem(1, 1, false);
             pEntity.itemHandler.extractItem(2, 1, false);
             pEntity.itemHandler.extractItem(3, 1, false);
-            pEntity.itemHandler.setStackInSlot(4, new ItemStack(recipe.get().getResultItem().getItem(),
-                    pEntity.itemHandler.getStackInSlot(4).getCount() + 1));
+            pEntity.itemHandler.extractItem(4, 1, false);
+            pEntity.itemHandler.setStackInSlot(5, new ItemStack(recipe.get().getResultItem().getItem(),
+                    pEntity.itemHandler.getStackInSlot(5).getCount() + 1));
 
             pEntity.resetProgress();
         }
@@ -306,10 +307,10 @@ public class BrewerBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack stack) {
-        return inventory.getItem(4).getItem() == stack.getItem() || inventory.getItem(4).isEmpty();
+        return inventory.getItem(5).getItem() == stack.getItem() || inventory.getItem(5).isEmpty();
     }
 
     private static boolean canInsertAmountIntoOutputSlot(SimpleContainer inventory) {
-        return inventory.getItem(4).getMaxStackSize() > inventory.getItem(4).getCount();
+        return inventory.getItem(5).getMaxStackSize() > inventory.getItem(5).getCount();
     }
 }

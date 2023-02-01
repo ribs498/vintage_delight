@@ -22,12 +22,12 @@ public class BrewerMenu extends AbstractContainerMenu {
     private FluidStack fluidStack;
 
     public BrewerMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-        this(id, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(5));
+        this(id, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(6));
     }
 
     public BrewerMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.BREWER_MENU.get(), id);
-        checkContainerSize(inv, 5);
+        checkContainerSize(inv, 6);
         blockEntity = (BrewerBlockEntity) entity;
         this.level = inv.player.level;
         this.data = data;
@@ -40,7 +40,8 @@ public class BrewerMenu extends AbstractContainerMenu {
             this.addSlot(new SlotItemHandler(handler, 1, 62, 22));
             this.addSlot(new SlotItemHandler(handler, 2, 62, 41));
             this.addSlot(new SlotItemHandler(handler, 3, 62, 60));
-            this.addSlot(new SlotItemHandler(handler, 4, 134, 41));
+            this.addSlot(new SlotItemHandler(handler, 4, 81, 22));
+            this.addSlot(new SlotItemHandler(handler, 5, 100, 60));
 
         });
         addDataSlots(data);
@@ -86,7 +87,7 @@ public class BrewerMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 5;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 6;  // must be the number of slots you have!
 
     @Override
     public ItemStack quickMoveStack(Player playerIn, int index) {
